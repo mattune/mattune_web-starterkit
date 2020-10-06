@@ -1,0 +1,47 @@
+@import "define.scss";
+
+// -----------------------------------------------------------------
+// どのサイトでもだいたい使うようなmixin
+// -----------------------------------------------------------------
+// easing簡易入力
+@mixin easing($duration:0.4s, $easing:$ease, $property:all, $delay:0s) {
+  transition-duration: $duration;
+  transition-timing-function: $easing;
+  transition-property: $property;
+  transition-delay: $delay;
+}
+
+
+// メディアクエリ簡易入力
+@mixin pc {
+  @media screen and (min-width: #{$TB}px + 1) {
+    @content;
+  }
+}
+@mixin tb {
+  @media screen and (min-width: #{$SP}px) and (max-width: #{$TB}px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: #{$SP}px) {
+    @content;
+  }
+}
+
+@mixin max {
+  @media screen and (min-width: #{$MAX}px) {
+    @content;
+  }
+}
+
+@mixin min {
+  @media screen and (min-width: #{$MIN}px) and (max-width: #{$MAX}px) {
+    @content;
+  }
+}
+
+@function get_vw($size, $viewport:$MIN){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}

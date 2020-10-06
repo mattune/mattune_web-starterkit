@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------
+// PC
+// -----------------------------------------------------------------
+@function vw($size){
+  @return $size * 1px;
+}
+
+
+html,body {
+  height: 100%;
+}
+
+body {
+  background-color: $lightgray2;
+  @include kinto;
+  color: $black;
+  font-size: vw(16);
+
+  &.noscroll {
+    overflow: hidden;
+  }
+
+  img {
+    vertical-align: bottom;
+  }
+
+  .pc {display: inline-block;}
+  .tb {display: none;}
+  .sp {display: none;}
+
+  .target {
+    @include easing($duration:0.6s);
+    transform: translateY(10px);
+    opacity: 0;
+
+    &.action {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .lzy {
+    opacity: 0;
+
+    &.action {
+      @include easing($duration:0.6s);
+      opacity: 1;
+    }
+  }
+
+  .disable-hover {
+    pointer-events: none;
+  }
+}

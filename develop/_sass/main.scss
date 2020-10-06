@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------
+// css import
+// -----------------------------------------------------------------
+@import "~formula-css/release/formula.css"; // reset css
+// @import "~swiper/swiper.scss";
+
+
+// -----------------------------------------------------------------
+// module import
+// -----------------------------------------------------------------
+@import "_module/_define.scss";
+@import "_module/_mixin.scss";
+@import "_module/_keyframe.scss";
+
+
+
+// -----------------------------------------------------------------
+// site css import
+// -----------------------------------------------------------------
+// PC
+@import "base/_config.scss";
+@import "base/_base.scss";
+
+
+// MAX
+@include max {
+  @import "max/_base.scss";
+}
+
+
+// TB
+@include tb {
+  @import "tb/_config.scss";
+  @import "tb/_base.scss";
+}
+
+
+// SP
+@include sp {
+  @import "sp/_config.scss";
+  @import "sp/_base.scss";
+}

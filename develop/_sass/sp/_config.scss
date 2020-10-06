@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------
+// SP
+// -----------------------------------------------------------------
+@function vw($size){
+  @return get_vw($size, $SP);
+}
+
+
+body {
+  font-size: vw(14);
+
+  .pc {display: none;}
+  .tb {display: none;}
+  .sp {display: inline-block !important;}
+}

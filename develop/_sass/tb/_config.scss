@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------
+// TB
+// -----------------------------------------------------------------
+@function vw($size){
+  @return get_vw($size, $TB);
+}
+
+
+body {
+  font-size: vw(16);
+
+  .pc {display: none;}
+  .tb {display: inline-block !important;}
+  .sp {display: none;}
+}
