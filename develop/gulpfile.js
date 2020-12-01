@@ -21,8 +21,8 @@ const paths = {
   'exScss': '!_sass/**/_*.scss', // コンパイル除外するscssファイルのパス（_が付いたcssファイルは除外）
   'webpack': '_js/src/**/*.js', // webpack用jsファイルのパス
 
-  'css': '../htdocs/material/css/', // cssコンパイル先のパス
-  'js': '../htdocs/material/js/' // jsコンパイル先のパス
+  'css': '../htdocs/assets/css/', // cssコンパイル先のパス
+  'js': '../htdocs/assets/js/' // jsコンパイル先のパス
 };
 
 
